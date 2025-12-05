@@ -34,8 +34,7 @@ export type Database = {
           id: string;
           org_id: string;
           name: string;
-          yclients_company_id: number;
-          yclients_branch_id: number;
+          yclients_company_id: number | null;
           created_at: string;
         };
       };

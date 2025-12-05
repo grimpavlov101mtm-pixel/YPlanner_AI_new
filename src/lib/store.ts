@@ -5,7 +5,7 @@ interface Profile {
   id: string;
   org_id: string | null;
   full_name: string | null;
-  phone: string | null;
+  telegram_chat_id: number | null;
   role: 'ORG_ADMIN' | 'BRANCH_ADMIN' | 'BRANCH_MANAGER' | 'BRANCH_ANALYST';
 }
 
@@ -13,8 +13,7 @@ interface Branch {
   id: string;
   org_id: string;
   name: string;
-  yclients_company_id: number;
-  yclients_branch_id: number;
+  yclients_company_id: number | null;
 }
 
 interface AppState {

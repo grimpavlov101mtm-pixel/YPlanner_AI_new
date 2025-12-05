@@ -85,7 +85,6 @@ export function LoginPage() {
           const { error: profileError } = await supabase.from('profiles').insert({
             id: authData.user.id,
             full_name: fullName,
-            phone: normalizePhone(phone),
             role: role,
           });
 
