@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { supabase } from './lib/supabase';
 import { useAppStore } from './lib/store';
 import { LoginPage } from './pages/LoginPage';
+import { YclientsMarketplaceAuthPage } from './pages/YclientsMarketplaceAuthPage';
 import { DashboardPage } from './pages/DashboardPage';
 import { ServicesPage } from './pages/ServicesPage';
 import { CalendarPage } from './pages/CalendarPage';
@@ -121,6 +122,10 @@ function App() {
           <Route
             path="/login"
             element={user ? <Navigate to="/" replace /> : <LoginPage />}
+          />
+          <Route
+            path="/yclients-marketplace/signup"
+            element={<YclientsMarketplaceAuthPage />}
           />
           <Route
             path="/"

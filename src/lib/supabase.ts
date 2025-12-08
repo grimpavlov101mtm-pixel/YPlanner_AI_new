@@ -35,6 +35,10 @@ export type Database = {
           org_id: string;
           name: string;
           yclients_company_id: number | null;
+          connection_type: 'manual' | 'marketplace';
+          marketplace_status: 'trial' | 'active' | 'expired' | 'cancelled' | null;
+          marketplace_salon_id: number | null;
+          marketplace_app_id: string | null;
           created_at: string;
         };
       };

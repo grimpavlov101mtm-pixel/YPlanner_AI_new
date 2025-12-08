@@ -14,6 +14,10 @@ interface Branch {
   org_id: string;
   name: string;
   yclients_company_id: number | null;
+  connection_type?: 'manual' | 'marketplace';
+  marketplace_status?: 'trial' | 'active' | 'expired' | 'cancelled';
+  marketplace_salon_id?: number | null;
+  marketplace_app_id?: string | null;
 }
 
 interface AppState {
